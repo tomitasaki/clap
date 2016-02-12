@@ -14,6 +14,8 @@
 		BA4E4BDF1C6DB245006A1A2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4E4BDD1C6DB245006A1A2C /* LaunchScreen.storyboard */; };
 		BA4E4BEA1C6DB245006A1A2C /* clapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E4BE91C6DB245006A1A2C /* clapTests.swift */; };
 		BA4E4BF51C6DB245006A1A2C /* clapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E4BF41C6DB245006A1A2C /* clapUITests.swift */; };
+		BA4E4C051C6DB275006A1A2C /* clap-button.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4E4C031C6DB275006A1A2C /* clap-button.png */; };
+		BA4E4C061C6DB275006A1A2C /* clap.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA4E4C041C6DB275006A1A2C /* clap.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BA4E4BF01C6DB245006A1A2C /* clapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4E4BF41C6DB245006A1A2C /* clapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clapUITests.swift; sourceTree = "<group>"; };
 		BA4E4BF61C6DB245006A1A2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4E4C031C6DB275006A1A2C /* clap-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clap-button.png"; path = "Clap素材/clap-button.png"; sourceTree = "<group>"; };
+		BA4E4C041C6DB275006A1A2C /* clap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = clap.wav; path = "Clap素材/clap.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				BA4E4BD81C6DB245006A1A2C /* Main.storyboard */,
 				BA4E4BDB1C6DB245006A1A2C /* Assets.xcassets */,
 				BA4E4BDD1C6DB245006A1A2C /* LaunchScreen.storyboard */,
+				BA4E4C031C6DB275006A1A2C /* clap-button.png */,
+				BA4E4C041C6DB275006A1A2C /* clap.wav */,
 				BA4E4BE01C6DB245006A1A2C /* Info.plist */,
 			);
 			path = clap;
@@ -229,9 +235,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4E4C061C6DB275006A1A2C /* clap.wav in Resources */,
 				BA4E4BDF1C6DB245006A1A2C /* LaunchScreen.storyboard in Resources */,
 				BA4E4BDC1C6DB245006A1A2C /* Assets.xcassets in Resources */,
 				BA4E4BDA1C6DB245006A1A2C /* Main.storyboard in Resources */,
+				BA4E4C051C6DB275006A1A2C /* clap-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
