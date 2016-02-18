@@ -9,7 +9,9 @@
 import UIKit
 import AVFoundation
 
+//class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
 class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+
     @IBOutlet var clapPickerView: UIPickerView!
     var audioPlayer:AVAudioPlayer!
     var soundCount:Int = 0
@@ -19,23 +21,26 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
      //再生する音源のURLを生成
         let soundFilePath = NSBundle.mainBundle().pathForResource("clap", ofType: "wav")!
-        let fileURL = NSURL(fileURLWithPath:Strimg(soundFilePath))
+        let fileURL = NSURL(fileURLWithPath:String(soundFilePath))
         
     //AVAudioPlayerのインスタント化
     do{
-       audioPlayer = try AVAudioPlayer(countentsOfURL:fileURL)
+       audioPlayer = try AVAudioPlayer(contentsOfURL:fileURL)
     }catch{
        print("音楽ファイルを読み込めませんでした。")
     }
         
-    clapPickerView.delegate = self
+//    clapPickerView.delegate = self
     clapPickerView.delegate = self
         
     
 
 
     }
-        
+ 
+    
+
+    
     //いくつカテゴリーを持つか
         func numberOfCompanentsInPickerView(PickerView: UIPickerView)->Int{
             return 1
@@ -45,15 +50,15 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             return 10
         }
         //選択しに何を表示していくか１
-        func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent companent:Int)->String{
+        func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component:Int)->String!{
             return"\(row+1)回"
         }
-        func pickerView(pickerView: UIPickerView, didSelectRow row:Int, inComponent companent:Int){
+        func pickerView(pickerView: UIPickerView, didSelectRow row:Int, inComponent component:Int){
             soundCount = row
         }
         @IBAction func playButton(){
             
-         audioPlayer.numderOfLoops = soundCount
+         audioPlayer.numberOfLoops = soundCount
          audioPlayer.play()
          }
 

@@ -24,13 +24,16 @@
                                 <rect key="frame" x="110" y="123" width="100" height="100"/>
                                 <state key="normal" backgroundImage="clap-button.png"/>
                                 <connections>
-                                    <action selector="playButton" destination="BYZ-38-t0r" eventType="touchDragOutside" id="YLh-ru-tHU"/>
+                                    <action selector="playButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Mw-s0-gWq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="clapPickerView" destination="rfd-1Y-reW" id="UwR-ZM-2SQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
