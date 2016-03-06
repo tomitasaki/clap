@@ -14,6 +14,8 @@ import AVFoundation
 //class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+
+    
     
     @IBOutlet var clapPickerView: UIPickerView!
     var audioPlayer:AVAudioPlayer!
@@ -39,10 +41,29 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         
     }
+    //表示列
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    //表示個数
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+    
+    //表示内容
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(row+1)回"
+    }
+    
+    //選択時
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        soundCount = row
+    }
+    /*
     
     //いくつカテゴリーを持つか
-    func numberOfCompanentsInPickerView(PickerView: UIPickerView)->Int{
+    func numberOfCompanentsInPickerView(pickerView: UIPickerView)->Int{
         return 1
         
     }
@@ -55,9 +76,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return"\(row+1)回"
     }
-    func PickerView(pickerView: UIPickerView, didSelectRow row:Int, inComponent companent:Int){
+    func pickerView(pickerView: UIPickerView, didSelectRow row:Int, inComponent companent:Int){
         soundCount = row
-    }
+    }*/
     @IBAction func playButton(){
         
         audioPlayer.numberOfLoops = soundCount
