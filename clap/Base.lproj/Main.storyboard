@@ -32,7 +32,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="clapPickerView" destination="rfd-1Y-reW" id="UwR-ZM-2SQ"/>
+                        <outlet property="clapPickerView" destination="rfd-1Y-reW" id="Nxe-fF-qA9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

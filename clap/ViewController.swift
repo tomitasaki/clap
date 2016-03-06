@@ -6,11 +6,14 @@
 //  Copyright © 2016年 hmlab book pro. All rights reserved.
 //
 
+
+
 import UIKit
 import AVFoundation
 
 //class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-class ViewController: UIViewController,UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
     @IBOutlet var clapPickerView: UIPickerView!
     var audioPlayer:AVAudioPlayer!
@@ -32,6 +35,7 @@ class ViewController: UIViewController,UIPickerViewDelegate {
         
         //    clapPickerView.delegate = self
         clapPickerView.delegate = self
+        clapPickerView.dataSource = self
         
         
     }
@@ -45,24 +49,25 @@ class ViewController: UIViewController,UIPickerViewDelegate {
     //いくつ選択しをつくるか
     func pickerView(pickerView: UIPickerView,numberOfRowsInCompanent companent:Int)->Int{
         return 10
-        
-        //選択しに何を表示していくか１
-        func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-            return"\(row+1)回"
-        }
-        func PickerView(pickerView: UIPickerView, didSelectRow row:Int, inComponent companent:Int){
-            soundCount = row
-        }
-         @IBAction func playButton(){
-            
-            audioPlayer.numberOfLoops = soundCount
-            audioPlayer.play()
-        }
-        
-       override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
-        
     }
+    
+    //選択しに何を表示していくか１
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return"\(row+1)回"
+    }
+    func PickerView(pickerView: UIPickerView, didSelectRow row:Int, inComponent companent:Int){
+        soundCount = row
+    }
+    @IBAction func playButton(){
+        
+        audioPlayer.numberOfLoops = soundCount
+        audioPlayer.play()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
 }
